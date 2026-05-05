@@ -9,5 +9,16 @@ function App() {
     { title: "Project 2", description: "Description of Project 2" },
     { title: "Project 3", description: "Description of Project 3" },
   ];
+
+  return (
+    <div className="App">
+      <h1>My Projects</h1>
+      <Search />
+      <ProjList projects={projects} />
+      <Form />
+    </div>
+  );
+
 }
-}
+
+export default App;
