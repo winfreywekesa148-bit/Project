@@ -6,6 +6,11 @@ function Form () {
 
     const handleSubmit = (e) => {
         e.preventDefault();
+        const newProject = {
+            title,
+            description
+        };
+        console.log("Submitted project:", newProject);
         // Handle form submission logic here
     };
 
@@ -28,7 +33,7 @@ function Form () {
                     onChange={(e) => setDescription(e.target.value)}
                 />
             </div>
-            <button type="submit">Submit</button>
+            <button type="submit" onClick={handleSubmit}>Submit</button>
         </form>
     );
 }
