@@ -3,15 +3,23 @@ import { useState } from "react";
 function Form () {
     const [title, setTitle] = useState("");
     const [description, setDescription] = useState("");
+        // stores all submitted projects
+    const [projects, setProjects] = useState([]);
+
 
     const handleSubmit = (e) => {
         e.preventDefault();
+        
         const newProject = {
             title,
             description
         };
-        console.log("Submitted project:", newProject);
-        // Handle form submission logic here
+       //+my project to array
+        setProjects([...projects, newProject]);
+        
+        // Clear form fields
+        setTitle("");
+        setDescription("");
     };
 
     return (
