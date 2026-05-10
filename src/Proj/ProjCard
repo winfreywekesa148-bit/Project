@@ -1,6 +1,7 @@
 function ProjCard ({ title, description }) {
     return (
-        <div className="proj-card">
+        
+        <div className="proj-card" style={{ border: "1px solid #ccc", borderStyle: "dotted", padding: "16px", margin: "16px", backgroundColor: "solid black" }}>
             <h2>{title}</h2>
             <p>{description}</p>
             <button>View Project</button>
